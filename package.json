@@ -1,5 +1,5 @@
 {
-  "name": "simple-canvas",
+  "name": "nextjs-r3f-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "devDependencies": {
     "next-transpile-modules": "^10.0.0",
-    "sass": "^1.55.0"
+    "sass": "^1.56.0"
   }
 }
