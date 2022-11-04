@@ -1,6 +1,6 @@
 import React, { useRef, useCallback } from "react";
 import { useFrame } from "@react-three/fiber";
-import Object01 from "../object01";
+import Object01 from "../Object01";
 
 export const ObjectLoop = (props: any) => {
 	const totalObjs = 20;
