@@ -28,7 +28,7 @@ export const Object01 = (props: any) => {
 					attach="geometry"
 					args={[randFloat(0.75, 1.5, 2), 0]}
 				/>
-				<meshStandardMaterial attach="material" color="silver" />
+				<meshStandardMaterial attach="material" color="lightgreen" />
 			</mesh>
 		</>
 	);

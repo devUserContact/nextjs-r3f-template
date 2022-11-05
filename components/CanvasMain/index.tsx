@@ -8,7 +8,7 @@ const CanvasMain = () => {
 		<Canvas
 			camera={{ position: [0, 0, 25] }}
 		>
-			<color attach="background" args={["lightblue"]} />
+			<color attach="background" args={["lightgrey"]} />
 			<ObjectLoop />
 		</Canvas>
 	);
