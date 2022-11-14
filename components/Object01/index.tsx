@@ -1,36 +1,24 @@
 import React, { useRef, useCallback } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, shaderMaterial  } from "@react-three/fiber";
+
+import testVert from "../../shaders/testVert.vert";
+import testFrag from "../../shaders/testFrag.frag";
 
 export const Object01 = (props: any) => {
-	const randGen = (min: number, max: number) => {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		const rand = Math.floor(Math.random() * (max - min + 1)) + min;
-		return rand;
-	};
-	const randFloat = (min: number, max: number, decimals: number) => {
-		const rand = (Math.random() * (max - min) + min).toFixed(decimals);
-		return rand;
-	};
-	const randomCoord = useCallback(() => {
-		let coordArray = [];
-		for (let i = 0; i < 3; i++) {
-			coordArray.push(randFloat(-10, 10, 2));
-		}
-		return coordArray;
-	});
 	const mesh: any = useRef();
-	useFrame((state, delta) => (mesh.current.rotation.y += 0.005));
+
+	//	useFrame((state, delta) => {
+	//
+	//	});
 	return (
-		<>
-			<mesh {...props} ref={mesh} position={randomCoord()}>
-				<octahedronGeometry
-					attach="geometry"
-					args={[randFloat(0.75, 1.5, 2), 0]}
-				/>
-				<meshStandardMaterial attach="material" color="lightgreen" />
-			</mesh>
-		</>
+		<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} >
+			<planeGeometry args={[20, 20, 16, 16]} />
+			<shaderMaterial
+				fragmentShader={testFrag}
+				vertexShader={testVert}
+				wireframe
+			/>
+		</mesh>
 	);
 };
 export default Object01;
