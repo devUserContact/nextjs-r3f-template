@@ -14,7 +14,7 @@ const CanvasMain = () => {
 			<spotLight position={[-10, 20, 20]} color="white" />
 			<color attach="background" args={["lightgrey"]} />
 			<Object01 />
-			<OrbitControls autoRotate/>
+			<OrbitControls />
 		</Canvas>
 	);
 };
