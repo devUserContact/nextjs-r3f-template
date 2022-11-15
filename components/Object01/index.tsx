@@ -23,7 +23,7 @@ export const Object01 = (props: any) => {
 	});
 	return (
 		<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} >
-			<planeGeometry args={[20, 20, 32, 32]} />
+			<boxGeometry args={[10, 10, 10, 16, 16, 2]} />
 			<shaderMaterial
 				fragmentShader={testFrag}
 				vertexShader={testVert}

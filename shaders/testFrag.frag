@@ -4,7 +4,6 @@ precision mediump float;
 
 uniform float u_time;
 void main() {
-	float y = gl_FragCoord.y / 125.0;
-	vec3 color = vec3(cos(y), cos(y), sin(y));
-	gl_FragColor = vec4(color, 1.0);
+	vec2 color = vec2(sin(u_time * 0.20f), cos(u_time * 0.20f));
+	gl_FragColor = vec4(color, 0.25, 1.0);
 }
