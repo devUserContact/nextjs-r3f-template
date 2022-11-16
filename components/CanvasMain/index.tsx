@@ -10,8 +10,6 @@ const CanvasMain = () => {
 		<Canvas
 			camera={{ position: [0, 0, 25] }}
 		>
-			<ambientLight intensity={0.1}/>
-			<spotLight position={[-10, 20, 20]} color="white" />
 			<color attach="background" args={["lightgrey"]} />
 			<Object01 />
 			<OrbitControls autoRotate />
