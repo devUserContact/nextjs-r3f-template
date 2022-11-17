@@ -9,7 +9,7 @@ const CanvasMain = () => {
 	return (
 		<Canvas
 			camera={{ position: [0, 0, 25] }}
-		>
+			>
 			<color attach="background" args={["lightgrey"]} />
 			<Object01 />
 			<OrbitControls autoRotate />
