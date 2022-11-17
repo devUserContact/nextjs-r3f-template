@@ -26,8 +26,8 @@ void main(void) {
 
   // Pretty basic lambertian lighting...
   vec4 addedLights = vec4(0.0,
-                          0.25,
-                          0.5,
+                          0.0,
+                          0.0,
                           1.0);
   for(int l = 0; l < NUM_POINT_LIGHTS; l++) {
       vec3 lightDirection = normalize(vecPos
@@ -42,6 +42,6 @@ void main(void) {
 
 
 	vec2 color = vec2(sin(u_time * 0.20f), cos(u_time * 0.20f));
-	gl_FragColor = vec4(color, 0.25, 1.0)
+	gl_FragColor = vec4(color, 0.5, 1.0)
                  * addedLights;
 }

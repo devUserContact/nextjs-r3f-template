@@ -20,11 +20,11 @@ void main() {
 //  gl_Position = projectionMatrix *
 //                vec4(vecPos, 1.0);
 
-	vec4 modelPosition = modelMatrix * vec4(position.x * 2.0, position.y * 2.0,
-			position.z * 0.25, 1.0);
+	vec4 modelPosition = modelMatrix * vec4(position.x * 1.0, position.y * 1.0,
+			position.z * 0.05, 1.0);
 
-	modelPosition.y -= 0.5*sin((modelPosition.x)/2.0 + u_time) * 2.0;
-	modelPosition.y -= 0.5*sin((modelPosition.z)/4.0 + u_time) * 4.0;
+	modelPosition.y -= sin((modelPosition.x)*1.0 + u_time) * 1.0;
+	modelPosition.y -= sin((modelPosition.z)*2.0 + u_time) * 1.0;
 //	modelPosition.xy -= 0.50*cos((modelPosition.x)*1.0 + u_time) * 1.0;
 
 	vec4 viewPosition = viewMatrix * modelPosition;

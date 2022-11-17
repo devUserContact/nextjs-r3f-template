@@ -8,11 +8,11 @@ import styles from "../../styles/Main.module.scss";
 const CanvasMain = () => {
 	return (
 		<Canvas
-			camera={{ position: [0, 0, 25] }}
+			camera={{ position: [0, 10, 30] }}
 			>
 			<color attach="background" args={["lightgrey"]} />
 			<Object01 />
-			<OrbitControls autoRotate />
+			<OrbitControls />
 		</Canvas>
 	);
 };

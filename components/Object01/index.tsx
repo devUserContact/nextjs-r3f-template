@@ -31,8 +31,8 @@ export const Object01 = (props: any) => {
 	});
 	return (
 		<>
-			<pointLight position={[0,14,6]} />
-			<pointLight position={[0,-14,6]} />
+			<pointLight position={[0,14,10]} color="white"/>
+			<pointLight position={[0,-14,-10]} />
 			<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
 				<boxGeometry args={[10, 10, 10, 32, 32, 32]} />
 				<shaderMaterial
