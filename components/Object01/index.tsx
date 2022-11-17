@@ -11,7 +11,8 @@ export const Object01 = (props: any) => {
 		UniformsLib['lights'],
 		{
 			u_time: { value: 0.0 },
-			lightIntensity: {type: 'f', value: 0.4}
+			lightIntensity: {type: 'f', value: 0.3},
+			diffuse: { value: [ 0.2, 0.8, 0.3 ]}
 		},
 	]);
 	//	const uniforms = useMemo(

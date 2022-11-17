@@ -8,7 +8,7 @@ import styles from "../../styles/Main.module.scss";
 const CanvasMain = () => {
 	return (
 		<Canvas
-			camera={{ position: [0, 10, 30] }}
+			camera={{ position: [0, 8, 10] }}
 			>
 			<color attach="background" args={["lightgrey"]} />
 			<Object01 />
