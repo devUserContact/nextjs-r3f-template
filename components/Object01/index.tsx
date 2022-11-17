@@ -6,13 +6,12 @@ import testVert from "../../shaders/testVert.vert";
 import testFrag from "../../shaders/testFrag.frag";
 
 export const Object01 = (props: any) => {
-
 	var uniforms = UniformsUtils.merge([
-		UniformsLib['lights'],
+		UniformsLib["lights"],
 		{
 			u_time: { value: 0.0 },
-			lightIntensity: {type: 'f', value: 0.3},
-			diffuse: { value: [ 0.2, 0.8, 0.3 ]}
+			lightIntensity: { type: "f", value: 0.35 },
+			diffuse: { value: [0.2, 0.8, 0.6] },
 		},
 	]);
 	//	const uniforms = useMemo(
@@ -32,9 +31,8 @@ export const Object01 = (props: any) => {
 	});
 	return (
 		<>
-			<pointLight position={[0,14,10]} color="white"/>
-			<pointLight position={[0,-14,-10]} />
-			<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+			<pointLight position={[-10, 14, 8]} />
+			<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, -Math.PI / 1.6]}>
 				<boxGeometry args={[10, 10, 10, 32, 32, 32]} />
 				<shaderMaterial
 					fragmentShader={testFrag}
