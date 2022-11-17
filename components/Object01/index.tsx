@@ -10,7 +10,7 @@ export const Object01 = (props: any) => {
 		UniformsLib["lights"],
 		{
 			u_time: { value: 0.0 },
-			lightIntensity: { type: "f", value: 0.35 },
+			lightIntensity: { value: 0.3 },
 			diffuse: { value: [0.2, 0.8, 0.6] },
 		},
 	]);
@@ -32,7 +32,7 @@ export const Object01 = (props: any) => {
 	return (
 		<>
 			<pointLight position={[-10, 14, 8]} />
-			<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, -Math.PI / 1.6]}>
+			<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, -Math.PI / 2.5]}>
 				<boxGeometry args={[10, 10, 10, 32, 32, 32]} />
 				<shaderMaterial
 					fragmentShader={testFrag}
