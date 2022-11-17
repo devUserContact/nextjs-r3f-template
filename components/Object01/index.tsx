@@ -39,6 +39,8 @@ export const Object01 = (props: any) => {
 					vertexShader={testVert}
 					uniforms={uniforms}
 					lights={true}
+					flatShading={true}
+					fog={true}
 				/>
 			</mesh>
 		</>
