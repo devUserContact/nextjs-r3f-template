@@ -2,8 +2,8 @@ import React, { useRef, useMemo } from "react";
 import { useFrame, shaderMaterial } from "@react-three/fiber";
 import { UniformsUtils, UniformsLib } from "three";
 
-import testVert from "../../shaders/testVert.vert";
-import testFrag from "../../shaders/testFrag.frag";
+import objV01 from "../../shaders/object01.vert";
+import objF01 from "../../shaders/object01.frag";
 
 export const Object01 = (props: any) => {
 	var uniforms = UniformsUtils.merge([
@@ -35,8 +35,8 @@ export const Object01 = (props: any) => {
 			<mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, -Math.PI / 2.5]}>
 				<boxGeometry args={[10, 10, 10, 32, 32, 32]} />
 				<shaderMaterial
-					fragmentShader={testFrag}
-					vertexShader={testVert}
+					fragmentShader={objF01}
+					vertexShader={objV01}
 					uniforms={uniforms}
 					lights={true}
 					flatShading={true}
