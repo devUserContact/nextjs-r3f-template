@@ -2,12 +2,13 @@ import React, { useRef, useMemo } from "react";
 import { useFrame, shaderMaterial } from "@react-three/fiber";
 import { UniformsUtils, UniformsLib } from "three";
 
-import objV01 from "../../shaders/object01.vert";
-import objF01 from "../../shaders/object01.frag";
+import particleVert from "../../shaders/particle.vert";
+import particleFrag from "../../shaders/particle.frag";
 
-export const Object01 = (props: any) => {
+export const Particles= (props: any) => {
 
-	const count =  500;
+	const count =  300;
+
 	const randomFloat = (min: number, max: number, decimals: number) => {
 		const rand = (Math.random() * (max - min) + min).toFixed(decimals);
 		return rand;
@@ -55,12 +56,12 @@ export const Object01 = (props: any) => {
 				/>
 				</bufferGeometry>
 				<shaderMaterial
-					fragmentShader={objF01}
-					vertexShader={objV01}
+					fragmentShader={particleFrag}
+					vertexShader={particleVert}
 					uniforms={uniforms}
 				/>
 			</points>
 		</>
 	);
 };
-export default Object01;
+export default Particles;

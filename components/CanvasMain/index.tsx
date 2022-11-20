@@ -1,18 +1,23 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-//import ObjectLoop from "../ObjectLoop";
-import Object01 from "../Object01";
+
+//import Geometry from "../Geometry";
+import Particles from "../Particles";
+
 import styles from "../../styles/Main.module.scss";
 
 const CanvasMain = () => {
 	return (
 		<Canvas
-			camera={{ position: [0, 3, 10] }}
+			camera={{ position: [0, 0, 10] }}
 			>
 			<color attach="background" args={["lightgrey"]} />
-			<Object01 />
-			<OrbitControls />
+			<Particles />
+{/*
+			<Geometry />
+*/}
+			<OrbitControls autoRotate />
 		</Canvas>
 	);
 };
