@@ -7,7 +7,7 @@ import Particles from "../Particles";
 
 import styles from "../../styles/Main.module.scss";
 
-const CanvasMain = () => {
+const CanvasPerspective = () => {
 	return (
 		<Canvas
 			camera={{ position: [0, 0, 10] }}
@@ -22,4 +22,4 @@ const CanvasMain = () => {
 	);
 };
 
-export default CanvasMain;
+export default CanvasPerspective;
