@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import CanvasMain from "../components/CanvasMain";
+import CanvasPerspctive from "../components/CanvasPerspective";
 
 import styles from "../styles/Main.module.scss";
 
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 			</Head>
 			<main>
 				<div className={styles.containerCanvas}>
-					<CanvasMain />
+					<CanvasPerspctive />
 				</div>
 			</main>
 		</div>
