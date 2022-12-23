@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+<<<<<<< HEAD
 import CanvasPerspective from "../components/CanvasPerspective";
+=======
+import CanvasPerspctive from "../components/CanvasPerspective";
+>>>>>>> c35b3114b78217e3974ec1318352bc2e5a99dca7
 
 import styles from "../styles/Main.module.scss";
 
@@ -14,7 +18,11 @@ const Home: NextPage = () => {
 			</Head>
 			<main>
 				<div className={styles.containerCanvas}>
+<<<<<<< HEAD
 					<CanvasPerspective />
+=======
+					<CanvasPerspctive />
+>>>>>>> c35b3114b78217e3974ec1318352bc2e5a99dca7
 				</div>
 			</main>
 		</div>
