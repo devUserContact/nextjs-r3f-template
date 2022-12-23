@@ -6,10 +6,12 @@ const nextConfig = {
 		config.module.rules.push({
 			test: /\.(glsl|frag|vert)$/,
 			type: "asset/source",
+      use: {
+        loader: "file-loader",
+      }
 		});
 		return config;
 	},
 };
-const withTM = require("next-transpile-modules")(["three"]);
-
+const withTM = require("next-transpile-modules")(["three", "@react-three/fiber", "@react-three/drei"]);
 module.exports = nextConfig, withTM;
