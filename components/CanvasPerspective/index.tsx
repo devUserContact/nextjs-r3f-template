@@ -1,27 +1,25 @@
-import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import React from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
 //import Geometry from "../Geometry";
 //import Particles from "../Particles";
-import CanvasGltf from "../CanvasGltf";
+import Gltf from '../Gltf'
 
-import styles from "../../styles/Main.module.scss";
+import styles from '../../styles/Main.module.scss'
 
 const CanvasPerspective = () => {
-	return (
-		<Canvas
-			camera={{ position: [0, 0, 10] }}
-			>
-			<color attach="background" args={["lightgrey"]} />
-			<CanvasGltf />
+  return (
+    <Canvas camera={{ position: [0, 0, 3] }}>
+      <color attach='background' args={['lightgrey']} />
+      <Gltf />
 {/*
 			<Particles />
 			<Geometry />
 */}
-			<OrbitControls autoRotate />
-		</Canvas>
-	);
-};
+      <OrbitControls />
+    </Canvas>
+  )
+}
 
-export default CanvasPerspective;
+export default CanvasPerspective
