@@ -17,7 +17,13 @@ export const Text = (props: any) => {
       <Center center>
         <Text3D font={myFont} size={1}>
           devUserContact
-          <meshToonMaterial color={0x00ffff} />
+          <meshToonMaterial
+            color={0x00ffdd}
+            transparent={true}
+            opacity={0.8}
+            wireframe={false}
+            fog={true}
+          />
         </Text3D>
       </Center>
     </>
