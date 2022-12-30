@@ -6,9 +6,6 @@ const nextConfig = {
 		config.module.rules.push({
 			test: /\.(glsl|frag|vert)$/,
 			type: "asset/source",
-      use: {
-        loader: "file-loader",
-      }
 		});
 		return config;
 	},
