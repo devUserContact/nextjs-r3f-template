@@ -1,5 +1,5 @@
 import React, { useMemo, useRef } from 'react'
-import { shaderMaterial, useFrame } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import { UniformsLib, UniformsUtils } from 'three'
 
 import planeVert from '../../shaders/plane.vert'
@@ -32,7 +32,7 @@ export const Geometry = (props: any) => {
         position={[0, 0, 0]}
         rotation={[-Math.PI / 2, 0, -Math.PI / 2.5]}
       >
-        <boxGeometry args={[10, 10, 10, 32, 32, 32]} />
+        <boxGeometry args={[5, 5, 5, 32, 32, 32]} />
         <shaderMaterial
           vertexShader={planeVert}
           fragmentShader={planeFrag}
@@ -42,10 +42,9 @@ export const Geometry = (props: any) => {
           fog={true}
         />
       </mesh>
-
       {/*
 			<mesh ref={mesh} position={[0, 0, 0]}>
-				<sphereGeometry args={[4, 16, 8]} />
+				<sphereGeometry args={[1.2, 16, 8]} />
 				<shaderMaterial
 					vertexShader={sphereVert}
 					fragmentShader={sphereFrag}
@@ -55,7 +54,7 @@ export const Geometry = (props: any) => {
 					fog={true}
 				/>
 			</mesh>
-        */}
+      */}
     </>
   )
 }
