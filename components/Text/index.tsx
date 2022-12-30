@@ -1,25 +1,27 @@
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Text3D, Center } from '@react-three/drei'
-
-import myFont from '../../static/UncutSans_Regular.json'
+import { Text3D, Center, Edges } from '@react-three/drei'
 
 export const Text = (props: any) => {
   const mesh: any = useRef()
 
   useFrame((state) => {
-    const { clock } = state
-    //    mesh.current.material.uniforms.u_time.value = clock.getElapsedTime()
   })
   return (
     <>
       <pointLight position={[-10, 14, 8]} />
-      <Center center>
-        <Text3D font={myFont} size={1}>
-          devUserContact
-          <meshToonMaterial color={0x00ffff} />
+      <mesh position={[-3, 1, 0]}>
+        <Text3D font='/UncutSans_Regular.json' lineHeight={0.7} size={1} dispose={null}>
+          {`dev\nUser\nContact`}
+          <meshToonMaterial
+            color={0x00ffdd}
+            transparent={true}
+            opacity={0.9}
+            wireframe={false}
+          />
+          <Edges color='black' />
         </Text3D>
-      </Center>
+      </mesh>
     </>
   )
 }
